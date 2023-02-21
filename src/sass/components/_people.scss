@@ -1,0 +1,13 @@
+.people {
+    max-width: 1250px;
+    // background-color: red;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 200px);
+    justify-content: space-around;
+    row-gap: 20px;
+    column-gap: 12px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}

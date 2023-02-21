@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7393B3;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    .logo{
+        padding-left: 20px;
+        font-size: 50px;
+    }
+
+    .search-bar{
+        padding-right: 20px;
+        align-self: flex-end;
+        // background-color: green;
+        display: flex;
+        align-items: center;
+        label {
+            padding-right: 5px;
+            font-size: 20px;
+        }
+        .form-control {
+            padding: 5px;
+            // border-radius: 5px;
+        }
+        .btn {
+            padding: 5px;
+            cursor: pointer;
+        }
+    }
+}

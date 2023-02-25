@@ -22,10 +22,7 @@ export function PeopleContextProvider({ children }) {
     }
 
     const setPagesCont = pages => {
-        setPages({
-            next: pages.next,
-            prev: pages.prev
-        })
+        setPages(pages)
     }
 
     const context = {

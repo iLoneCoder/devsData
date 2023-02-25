@@ -6,13 +6,17 @@ function Header() {
     const [name, setName] = useState("");
 
     const navigate = useNavigate();
-    const { setPeople } = useContext(PeopleContext);
+    const { setPeople, setPages } = useContext(PeopleContext);
     const handleSearch = async () => {
         console.log(name);
         if (name) {
             const response = await fetch(`https://swapi.dev/api/people?search=${name}`);
             const data = await response.json();
             setPeople(data.results);
+            setPages({
+                next: "",
+                prev: ""
+            })
             navigate("/");
         }
     }

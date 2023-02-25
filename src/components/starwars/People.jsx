@@ -21,7 +21,7 @@ function People() {
 
             const data = await getPeople(page);
             setPeople(data);
-            setPages({next: "", prev: ""});
+            setPages({ next: "", prev: "" });
             setPeople(data.results);
             // console.log(data.previous);
 
@@ -49,6 +49,7 @@ function People() {
 
         }
         fetchData();
+        // eslint-disable-next-line
     }, [page])
 
     const handleNextPageChange = () => {
@@ -63,10 +64,13 @@ function People() {
         return
     }
     return <>
-        <div className="people">
-            {people.map((person, ind) => <Card key={ind} person={person} />)}
+        <div className="people-container">
+            <div className="people">
+                {people.map((person, ind) => <Card key={ind} person={person} />)}
 
+            </div>
         </div>
+
         {pages.prev && <button onClick={handlePrevPageChange} >Prev page</button>}
         {pages.next && <button onClick={handleNextPageChange}>Next page</button>}
     </>
